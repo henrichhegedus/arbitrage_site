@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="mw6 center pa3 sans-serif">
+    {% for arb in data %}
+
+    <div class="pa2 mb3 striped--near-white">
+        <H2>{{arb.sport}}: {{ arb.competition }}</H2>
+        <h3>{{arb.team1}} vs. {{arb.team2}}</h3>
+        <table class="pl2">
+            <tr>
+                <td class="mb2">Margin: {{ arb.margin }}</td>
+            </tr>
+
+            <tr>
+                <td class="mb2">Bookie 1: {{ arb.bookie1 }}</td>
+                <td class="mb2">Odds 1: {{ arb.odds1 }}</td>
+            </tr>
+
+            <tr>
+                <td class="mb2">Bookie X: {{ arb.bookiex }}</td>
+                <td class="mb2">Odds X: {{ arb.oddsx }}</td>
+            </tr>
+
+            <tr>
+                <td class="mb2">Bookie 2: {{ arb.bookie2 }}</td>
+                <td class="mb2">Odds 2: {{ arb.odds2 }}</td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
