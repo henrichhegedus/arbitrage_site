@@ -1,0 +1,1 @@
+* 1 * * * python3 ~/scripts/clean_db.py >> /var/log/cron.log 2>&1

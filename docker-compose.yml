@@ -5,6 +5,7 @@ services:
     image: postgres
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db:/var/lib/postgres
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
