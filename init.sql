@@ -30,3 +30,18 @@ CREATE TABLE arbitrage.arbs(
                      CONSTRAINT date_match UNIQUE (date,match)
 
 );
+
+CREATE TABLE arbitrage.history(
+                      max_date DATE,
+                      sport VARCHAR(50),
+                      match VARCHAR(100),
+                      date DATE,
+                      time TIME,
+                      odds1 FLOAT(24),
+                      oddsx FLOAT(24),
+                      odds2 FLOAT(24),
+                      margin FLOAT(24),
+                      bookie1 VARCHAR(50),
+                      bookiex VARCHAR(50),
+                      bookie2 VARCHAR(50)
+);
