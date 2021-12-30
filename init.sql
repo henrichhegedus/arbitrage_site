@@ -32,7 +32,8 @@ CREATE TABLE arbitrage.arbs(
 );
 
 CREATE TABLE arbitrage.history(
-                      max_date DATE,
+                      date_observed DATE,
+                      time_observed TIME,
                       sport VARCHAR(50),
                       match VARCHAR(100),
                       date DATE,
