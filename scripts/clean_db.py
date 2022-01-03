@@ -10,8 +10,8 @@ connection = psycopg2.connect(user=config["user"],
 cursor = connection.cursor()
 
 query = """
-            delete from arbitrage.scrape where event_date < CURRENT_DATE; 
-            delete from arbitrage.arbs where date < CURRENT_DATE;
+            delete from public.scrape where event_date < CURRENT_DATE; 
+            delete from public.arbs where date < CURRENT_DATE;
         """
 
 cursor.execute(query)
