@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<style>
+    table{
+        width: 100%;
+    }
+</style>
+
+<div class="mw6 center pa3 sans-serif">
+    {% for scrape in data %}
+
+    <div class="pa2 mb3 striped--near-white">
+        <H2>{{scrape.sport}}: {{ scrape.competition }}</H2>
+        <H3>{{scrape.event_date}} {{scrape.event_time}}</H3>
+        <h3>{{scrape.match}}</h3>
+        <H3>{{scrape.bookie}}</H3>
+        <H3>Odds</H3>
+        <table class="pl2 center">
+            <tr>
+                <td class="mb2">1</td>
+                <td class="mb2">X</td>
+                <td class="mb2">2</td>
+            </tr>
+
+            <tr>
+                <td class="mb2">{{scrape.odds1}}</td>
+                <td class="mb2">{{scrape.oddsx}}</td>
+                <td class="mb2">{{scrape.odds2}}</td>
+            </tr>
+
+
+
+        </table>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

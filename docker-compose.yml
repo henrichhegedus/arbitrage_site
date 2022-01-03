@@ -8,7 +8,6 @@ services:
   db:
     image: postgres
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./db:/var/lib/postgres
     environment:
       - POSTGRES_DB=postgres
@@ -20,7 +19,7 @@ services:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - ./arbitrage_site:/code
     ports:
       - "8000:8000"
     depends_on:
